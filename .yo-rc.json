@@ -1,0 +1,14 @@
+{
+  "generator-videojs-plugin": {
+    "scope": "",
+    "name": "constant-timeupdate",
+    "description": "",
+    "author": "Arjun Ganesan <me@arjun-g.com>",
+    "license": "mit",
+    "sass": false,
+    "ie8": false,
+    "docs": false,
+    "lang": false,
+    "husky": "none"
+  }
+}
