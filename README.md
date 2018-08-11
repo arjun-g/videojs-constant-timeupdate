@@ -1,6 +1,6 @@
 # videojs-constant-timeupdate
 
-
+Adds a new event `constant-timeupdate` to player - an alternative to `timeupdate` event which will be triggered on a constant interval unlike `timeupdate`
 
 ## Installation
 
@@ -21,39 +21,14 @@ This is the simplest case. Get the script in whatever way you prefer and include
 <script src="//path/to/videojs-constant-timeupdate.min.js"></script>
 <script>
   var player = videojs('my-video');
-
-  player.constantTimeupdate();
+  player.constantTimeupdate({
+      interval: 1000,
+      roundFn: Math.round
+  });
 </script>
 ```
 
-### Browserify/CommonJS
 
-When using with Browserify, install videojs-constant-timeupdate via npm and `require` the plugin as you would any other module.
-
-```js
-var videojs = require('video.js');
-
-// The actual plugin function is exported by this module, but it is also
-// attached to the `Player.prototype`; so, there is no need to assign it
-// to a variable.
-require('videojs-constant-timeupdate');
-
-var player = videojs('my-video');
-
-player.constantTimeupdate();
-```
-
-### RequireJS/AMD
-
-When using with RequireJS (or another AMD library), get the script in whatever way you prefer and `require` the plugin as you normally would:
-
-```js
-require(['video.js', 'videojs-constant-timeupdate'], function(videojs) {
-  var player = videojs('my-video');
-
-  player.constantTimeupdate();
-});
-```
 
 ## License
 
